@@ -4,7 +4,7 @@ import "fmt"
 
 // Reception 接待
 type Reception struct {
-	next Department
+	next Process
 }
 
 func (r *Reception) execute(p *Patient) {
@@ -22,7 +22,7 @@ func (r *Reception) execute(p *Patient) {
 	r.execute(p)
 }
 
-func (r *Reception) setNext(next Department) Department {
+func (r *Reception) setNext(next Process) Process {
 	r.next = next
 	return r.next
 }

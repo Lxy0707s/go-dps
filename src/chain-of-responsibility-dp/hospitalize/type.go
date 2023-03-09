@@ -9,9 +9,9 @@ type Patient struct {
 	paymentDone   bool
 }
 
-// Department 处理行为接口
-type Department interface {
+// Process 处理流程 行为接口
+type Process interface {
 	execute(*Patient)
 	end()
-	setNext(Department) Department
+	setNext(Process) Process
 }

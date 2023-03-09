@@ -3,7 +3,7 @@ package hospitalize
 import "fmt"
 
 type Convalesce struct {
-	next Department
+	next Process
 }
 
 func (c *Convalesce) execute(p *Patient) {
@@ -21,7 +21,7 @@ func (c *Convalesce) execute(p *Patient) {
 	c.execute(p)
 }
 
-func (c *Convalesce) setNext(next Department) Department {
+func (c *Convalesce) setNext(next Process) Process {
 	c.next = next
 	return c.next
 }
