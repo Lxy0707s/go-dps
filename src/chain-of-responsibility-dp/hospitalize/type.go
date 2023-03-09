@@ -2,11 +2,12 @@ package hospitalize
 
 // Patient 病人
 type Patient struct {
-	name          string
-	receptionDone bool
-	checkUpDone   bool
-	medicineDone  bool
-	paymentDone   bool
+	name           string
+	receptionDone  bool
+	checkUpDone    bool
+	medicineDone   bool
+	paymentDone    bool
+	convalesceDone bool
 }
 
 // Process 处理流程 行为接口

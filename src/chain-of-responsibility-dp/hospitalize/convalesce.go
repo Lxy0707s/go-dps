@@ -7,7 +7,7 @@ type Convalesce struct {
 }
 
 func (c *Convalesce) execute(p *Patient) {
-	if p.medicineDone {
+	if p.convalesceDone {
 		if c.next == nil {
 			fmt.Println("正常流程完成，患者康复出院")
 			return
@@ -17,7 +17,7 @@ func (c *Convalesce) execute(p *Patient) {
 		return
 	}
 	fmt.Println("正常流程完成，判断是否能康复出院")
-	p.medicineDone = true
+	p.convalesceDone = true
 	c.execute(p)
 }
 
